@@ -1,0 +1,21 @@
+{
+  "hosting": {
+    "public": "public",
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "/privacy_policy",
+        "destination": "/privacy_policy.html"
+      },
+      {
+        "source": "/download",
+        "destination": "/download.html"
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

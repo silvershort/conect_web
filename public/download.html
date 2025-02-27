@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Conect</title>
+    <script>
+        window.onload = function() {
+            var iosLink = "https://apps.apple.com/us/app/%EC%BD%94%EB%84%A5%ED%8A%B8/id6742495964"; // 앱스토어 링크
+            var androidLink = "https://play.google.com/store/apps/details?id=com.silvershort.cosnect"; // 플레이스토어 링크
+
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = iosLink; // iOS 사용자는 앱스토어로 이동
+            } else {
+                window.location.href = androidLink; // 나머지는 플레이스토어로 이동
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>Redirecting to the app store...</p>
+</body>
+</html>
